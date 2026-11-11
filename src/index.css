@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #040b16;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  }
+}
+
+.bg-cyber-grid {
+  background-image:
+    linear-gradient(to right, rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.glass-panel {
+  background: linear-gradient(145deg, rgba(13, 30, 54, 0.78), rgba(6, 17, 34, 0.92));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+}
+
+.glass-card-hover {
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 212, 255, 0.42);
+  box-shadow: 0 20px 45px -15px rgba(0, 212, 255, 0.18);
+}
+
+/* =========================================================
+   PALETA 1: AZUL TECH ILUMINADO (Mais leve que preto)
+   ========================================================= */
+.palette-azul {
+  background-color: #0f2544 !important;
+  color: #f1f5f9 !important;
+}
+
+.palette-azul header {
+  background-color: rgba(13, 33, 64, 0.9) !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
+}
+
+.palette-azul #topo {
+  background-color: #112b50 !important;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(37, 99, 235, 0.22), transparent 50%),
+    linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+  background-size: auto, auto, 42px 42px, 42px 42px;
+}
+
+.palette-azul section {
+  background: linear-gradient(180deg, #10284a 0%, #15335e 50%, #0f2544 100%) !important;
+  border-color: rgba(56, 189, 248, 0.18) !important;
+}
+
+.palette-azul .glass-panel {
+  background: linear-gradient(145deg, rgba(24, 58, 107, 0.78), rgba(16, 41, 78, 0.92)) !important;
+  border-color: rgba(56, 189, 248, 0.28) !important;
+}
+
+.palette-azul footer {
+  background-color: #0c1f3a !important;
+}
+
+/* =========================================================
+   PALETA 2 & 3 ZONA CLARA: CLEAN CORPORATIVO & HÍBRIDA
+   ========================================================= */
+.palette-claro {
+  background-color: #f4f8fc !important;
+  color: #0f294a !important;
+}
+
+.palette-claro header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(22, 58, 112, 0.12) !important;
+  box-shadow: 0 4px 20px rgba(15, 41, 74, 0.05);
+}
+
+.palette-claro header a:not(.bg-emerald-500),
+.palette-claro header span {
+  color: #0f294a !important;
+}
+.palette-claro header .text-cyan-400 {
+  color: #0284c7 !important;
+}
+
+.palette-claro #topo {
+  background: linear-gradient(135deg, #eef5fd 0%, #ffffff 55%, #e6f2fc 100%) !important;
+}
+
+/* Hybrid keeps Hero & Footer in vibrant Azul Tech, middle sections light */
+.palette-hibrido {
+  background-color: #f4f8fc !important;
+}
+.palette-hibrido header {
+  background-color: rgba(13, 36, 68, 0.92) !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
+}
+.palette-hibrido #topo {
+  background: linear-gradient(135deg, #0c2342 0%, #143766 55%, #0e294e 100%) !important;
+}
+.palette-hibrido footer {
+  background: linear-gradient(180deg, #0e284d 0%, #091b36 100%) !important;
+}
+.palette-hibrido footer .glass-panel {
+  background: linear-gradient(145deg, rgba(22, 56, 102, 0.82), rgba(13, 35, 68, 0.92)) !important;
+  border-color: rgba(56, 189, 248, 0.25) !important;
+}
+
+/* Shared Light Zone styles for Paleta Claro (entire page) & Paleta Híbrido (light-zone) */
+.palette-claro .light-zone,
+.palette-claro #topo,
+.palette-claro footer,
+.palette-hibrido .light-zone {
+  color: #0f294a;
+}
+
+.palette-claro section:not(#topo),
+.palette-hibrido .light-zone section {
+  background: #f4f8fc !important;
+  border-color: rgba(22, 58, 112, 0.1) !important;
+}
+
+.palette-claro section:nth-of-type(even),
+.palette-hibrido .light-zone section:nth-of-type(even) {
+  background: #eaf2fb !important;
+}
+
+.palette-claro .glass-panel,
+.palette-hibrido .light-zone .glass-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(22, 58, 112, 0.12) !important;
+  box-shadow: 0 12px 32px -10px rgba(15, 41, 74, 0.1) !important;
+}
+
+.carousel-fade-left {
+  background: linear-gradient(to right, #040b16, rgba(4, 11, 22, 0.7), transparent);
+}
+.carousel-fade-right {
+  background: linear-gradient(to left, #040b16, rgba(4, 11, 22, 0.7), transparent);
+}
+.palette-azul .carousel-fade-left {
+  background: linear-gradient(to right, #0f2544, rgba(15, 37, 68, 0.7), transparent);
+}
+.palette-azul .carousel-fade-right {
+  background: linear-gradient(to left, #0f2544, rgba(15, 37, 68, 0.7), transparent);
+}
+.palette-claro .carousel-fade-left,
+.palette-hibrido .light-zone .carousel-fade-left {
+  background: linear-gradient(to right, #f4f8fc, rgba(244, 248, 252, 0.75), transparent);
+}
+.palette-claro .carousel-fade-right,
+.palette-hibrido .light-zone .carousel-fade-right {
+  background: linear-gradient(to left, #f4f8fc, rgba(244, 248, 252, 0.75), transparent);
+}
+
+.palette-claro .light-zone h1,
+.palette-claro .light-zone h2,
+.palette-claro .light-zone h3,
+.palette-claro .light-zone h4,
+.palette-claro #topo h1,
+.palette-claro #topo .text-white:not(.keep-dark):not(.keep-dark *),
+.palette-claro footer h2,
+.palette-claro footer .text-white:not(.keep-dark):not(.keep-dark *),
+.palette-claro .light-zone .text-white:not(.keep-dark):not(.keep-dark *):not(.bg-emerald-500):not(.bg-cyan-400),
+.palette-hibrido .light-zone h2,
+.palette-hibrido .light-zone h3,
+.palette-hibrido .light-zone h4,
+.palette-hibrido .light-zone .text-white:not(.keep-dark):not(.keep-dark *) {
+  color: #0f294a !important;
+}
+
+.palette-claro .light-zone .text-slate-300:not(.keep-dark *),
+.palette-claro .light-zone .text-slate-200:not(.keep-dark *),
+.palette-claro #topo .text-slate-300,
+.palette-claro footer .text-slate-300,
+.palette-hibrido .light-zone .text-slate-300:not(.keep-dark *),
+.palette-hibrido .light-zone .text-slate-200:not(.keep-dark *) {
+  color: #334155 !important;
+}
+
+.palette-claro .light-zone .text-slate-400:not(.keep-dark *),
+.palette-claro #topo .text-slate-400,
+.palette-claro footer .text-slate-400,
+.palette-hibrido .light-zone .text-slate-400:not(.keep-dark *) {
+  color: #475569 !important;
+}
+
+/* Light inner cards inside BI / Church / CRM */
+.palette-claro .light-zone [class*="bg-slate-900"]:not(.keep-dark):not(.keep-dark *),
+.palette-claro .light-zone [class*="bg-[#051020]"]:not(.keep-dark):not(.keep-dark *),
+.palette-claro .light-zone [class*="bg-[#040E18]"]:not(.keep-dark):not(.keep-dark *),
+.palette-claro .light-zone [class*="bg-slate-950"]:not(.keep-dark):not(.keep-dark *),
+.palette-claro #topo [class*="bg-slate-900"]:not(.keep-dark),
+.palette-hibrido .light-zone [class*="bg-slate-900"]:not(.keep-dark):not(.keep-dark *),
+.palette-hibrido .light-zone [class*="bg-[#051020]"]:not(.keep-dark):not(.keep-dark *),
+.palette-hibrido .light-zone [class*="bg-[#040E18]"]:not(.keep-dark):not(.keep-dark *),
+.palette-hibrido .light-zone [class*="bg-slate-950"]:not(.keep-dark):not(.keep-dark *) {
+  background-color: #f8fbff !important;
+  border-color: rgba(22, 58, 112, 0.14) !important;
+}
+
+/* Accent text contrast in light zones */
+.palette-claro .light-zone .text-cyan-300:not(.keep-dark *),
+.palette-claro #topo .text-cyan-300,
+.palette-hibrido .light-zone .text-cyan-300:not(.keep-dark *) {
+  color: #0284c7 !important;
+}
+.palette-claro .light-zone .text-emerald-300:not(.keep-dark *),
+.palette-claro .light-zone .text-emerald-400:not(.keep-dark *),
+.palette-hibrido .light-zone .text-emerald-300:not(.keep-dark *),
+.palette-hibrido .light-zone .text-emerald-400:not(.keep-dark *) {
+  color: #059669 !important;
+}
+.palette-claro .light-zone .text-sky-300:not(.keep-dark *),
+.palette-claro .light-zone .text-sky-400:not(.keep-dark *),
+.palette-hibrido .light-zone .text-sky-300:not(.keep-dark *),
+.palette-hibrido .light-zone .text-sky-400:not(.keep-dark *) {
+  color: #0369a1 !important;
+}
+.palette-claro .light-zone .text-violet-300:not(.keep-dark *),
+.palette-hibrido .light-zone .text-violet-300:not(.keep-dark *) {
+  color: #6d28d9 !important;
+}
+.palette-claro .light-zone .text-amber-300:not(.keep-dark *),
+.palette-hibrido .light-zone .text-amber-300:not(.keep-dark *) {
+  color: #b45309 !important;
+}
+
+.palette-claro footer {
+  background: #eaf2fb !important;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040b16;
+}
+::-webkit-scrollbar-thumb {
+  background: #163a70;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00d4ff;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,14 @@
+# Dependencies & build output
+node_modules/
+dist/
+.vercel/
+.env
+.env.*
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+
+# Marketing materials & loose screenshots not needed for web deploy
+instagram_kit/
+WhatsApp Image*.jpeg
