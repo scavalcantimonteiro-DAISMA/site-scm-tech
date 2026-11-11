@@ -5,6 +5,7 @@ import { WhatsAppIcon } from './WhatsAppButton';
 import {
   CONTACT_EMAIL,
   INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
   WHATSAPP_DISPLAY,
   getWhatsAppUrl,
 } from '../utils/whatsapp';
@@ -94,7 +95,7 @@ export function FooterContact() {
           </a>
 
           <a
-            href="https://instagram.com/scmtech"
+            href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="glass-panel rounded-2xl p-5 flex items-center gap-4 transition hover:border-pink-400/50"

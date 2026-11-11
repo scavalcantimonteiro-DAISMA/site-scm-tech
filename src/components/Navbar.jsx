@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Instagram, Menu, X } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 import { WhatsAppIcon } from './WhatsAppButton';
-import { getWhatsAppUrl } from '../utils/whatsapp';
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL, getWhatsAppUrl } from '../utils/whatsapp';
 
 const NAV_LINKS = [
   { label: 'Projetos', href: '#projetos' },
@@ -35,7 +35,17 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-2.5">
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Instagram ${INSTAGRAM_HANDLE}`}
+            className="inline-flex items-center gap-1.5 rounded-xl border border-pink-500/30 bg-pink-500/10 px-3 py-2 text-sm font-medium text-pink-200 transition-all hover:border-pink-400/60 hover:bg-pink-500/20 hover:text-white"
+          >
+            <Instagram className="h-4 w-4 text-pink-400" />
+            <span className="hidden xl:inline">{INSTAGRAM_HANDLE}</span>
+          </a>
           <a
             href={getWhatsAppUrl()}
             target="_blank"
@@ -70,6 +80,15 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl border border-pink-500/35 bg-pink-500/10 px-4 py-2.5 text-sm font-semibold text-pink-200"
+            >
+              <Instagram className="h-4 w-4 text-pink-400" />
+              <span>Instagram {INSTAGRAM_HANDLE}</span>
+            </a>
             <a
               href={getWhatsAppUrl()}
               target="_blank"

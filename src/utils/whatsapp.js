@@ -1,7 +1,8 @@
 export const WHATSAPP_NUMBER = '5581984255125';
 export const WHATSAPP_DISPLAY = '(81) 98425-5125';
 export const CONTACT_EMAIL = 'scavalcantimonteiro@gmail.com';
-export const INSTAGRAM_HANDLE = '@scmtech';
+export const INSTAGRAM_HANDLE = '@smctech_';
+export const INSTAGRAM_URL = 'https://www.instagram.com/smctech_/';
 
 export const DEFAULT_WHATSAPP_MESSAGE =
   'Olá! Vi o portfólio da SCM Tech no site e gostaria de solicitar um orçamento.';
