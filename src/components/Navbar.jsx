@@ -6,6 +6,7 @@ import { INSTAGRAM_HANDLE, INSTAGRAM_URL, getWhatsAppUrl } from '../utils/whatsa
 
 const NAV_LINKS = [
   { label: 'Projetos', href: '#projetos' },
+  { label: 'Captação B2B', href: '#captacao-b2b' },
   { label: 'Gestão de Igrejas', href: '#gestao-igrejas' },
   { label: 'BI & KPIs', href: '#kpis' },
   { label: 'CRM Telecom', href: '#crm-telecom' },

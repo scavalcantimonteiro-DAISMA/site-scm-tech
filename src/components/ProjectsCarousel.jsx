@@ -139,6 +139,7 @@ export function ProjectsCarousel({ onSelectProject }) {
             {filtered.map((project) => (
               <article
                 key={project.id}
+                id={project.id}
                 className="glass-panel glass-card-hover snap-start shrink-0 w-[86vw] sm:w-[370px] rounded-2xl p-5 flex flex-col justify-between"
               >
                 <div>
