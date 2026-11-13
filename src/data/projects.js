@@ -21,11 +21,11 @@ export const PROJECTS = [
     previewType: 'b2b',
     image: '/assets/real_screens/captacao_b2b.png',
     description:
-      'Solução robusta para equipes de vendas corporativas que precisam gerar leads qualificados em escala. Permite filtrar estabelecimentos por segmento (Hotéis, Hospitais, Clínicas, Bares e Restaurantes) nas 27 UFs do Brasil, extraindo CNPJ, WhatsApp verificado e portas de atendimento, com gestão de carteiras individuais e agendamento de visitas presenciais.',
+      'Solução robusta e adaptável para equipes comerciais que precisam gerar leads qualificados em escala em qualquer segmento de negócio. Permite filtrar e minerar empresas por atividade e nicho nas 27 UFs do Brasil, extraindo CNPJ, WhatsApp verificado e contatos de decisores, com gestão de carteiras exclusivas e agendamento de reuniões e visitas presenciais.',
     modules: [
       {
-        name: 'Mineração & Gerador de Leads B2B',
-        detail: 'Busca inteligente por CNAE em todo o Brasil, gerando lotes de 50 a 500 estabelecimentos com telefones e decisores.',
+        name: 'Mineração em Qualquer Segmento',
+        detail: 'Busca inteligente e segmentada para qualquer ramo de atividade em todo o Brasil, gerando listas qualificadas de empresas com telefones e decisores.',
       },
       {
         name: 'Carteira Comercial & Click-to-WhatsApp',
@@ -41,13 +41,13 @@ export const PROJECTS = [
       },
     ],
     capabilities: [
-      'Minerar centenas de leads corporativos qualificados em segundos por estado e município',
+      'Minerar centenas de leads corporativos qualificados em qualquer nicho por estado e município',
       'Distribuir carteiras exclusivas para cada consultor sem risco de duplicidade de abordagem',
       'Enviar propostas comerciais personalizadas no WhatsApp com apenas 1 clique',
       'Acompanhar taxa de conversão, metas batidas e visitas presenciais agendadas em tempo real',
     ],
     highlights: [
-      'Mineração por segmento em 27 UFs: Hotéis, Hospitais e Gastronomia de grande porte',
+      'Mineração abrangente para qualquer segmento de negócio nas 27 UFs do Brasil',
       'Funil de Prospecção Ativa: Novo → Contato → Negociação → Visita Marcada → Fechado',
       'Painel do Supervisor: controle de metas individuais e produtividade da equipe comercial',
       'Exportação instantânea para planilhas Excel (.xlsx) e rotas diretas no Google Maps',

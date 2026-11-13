@@ -779,7 +779,7 @@ function AppSimulator({ project }) {
               <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-3 flex flex-wrap items-center justify-between gap-3 text-xs">
                 <div className="flex items-center gap-2">
                   <span className="font-bold text-amber-300">Filtro Ativo:</span>
-                  <span className="rounded-md bg-slate-900 border border-slate-700 px-2 py-1 text-slate-200">Hotéis & Pousadas</span>
+                  <span className="rounded-md bg-slate-900 border border-slate-700 px-2 py-1 text-slate-200">Qualquer Segmento de Negócio</span>
                   <span className="rounded-md bg-slate-900 border border-slate-700 px-2 py-1 text-slate-200">São Paulo - SP (DDD 11)</span>
                 </div>
                 <div className="text-emerald-400 font-bold">500 Leads Extraídos</div>
@@ -787,15 +787,15 @@ function AppSimulator({ project }) {
 
               <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3 text-xs space-y-2">
                 <div className="grid grid-cols-12 font-bold text-slate-400 border-b border-slate-800 pb-2">
-                  <span className="col-span-5">Estabelecimento / Ramo</span>
+                  <span className="col-span-5">Empresa / Segmento</span>
                   <span className="col-span-3">Telefone / Whats</span>
-                  <span className="col-span-2">Portas/Telas</span>
+                  <span className="col-span-2">Porte / Estrutura</span>
                   <span className="col-span-2 text-right">Ação</span>
                 </div>
                 {[
-                  { name: 'Grand Plaza Hotel & Eventos', seg: 'Hotel 4 Estrelas • Jardins', phone: '(11) 98765-4321', portas: '120 quartos', cnpj: '12.345.678/0001-90' },
-                  { name: 'Pousada Villa Verde Resort', seg: 'Resort & Spa • Litoral', phone: '(11) 99123-8877', portas: '65 quartos', cnpj: '98.765.432/0001-10' },
-                  { name: 'Hospital Materno Infantil São Bento', seg: 'Hospital Geral • Moema', phone: '(11) 97441-2200', portas: '85 leitos', cnpj: '45.123.789/0001-44' },
+                  { name: 'Aliança Distribuidora & Logística', seg: 'Distribuição B2B • Galpão', phone: '(11) 98765-4321', portas: 'Grande Porte', cnpj: '12.345.678/0001-90' },
+                  { name: 'Grand Plaza Hotel & Eventos', seg: 'Hotelaria & Convenções', phone: '(11) 99123-8877', portas: '120 quartos', cnpj: '98.765.432/0001-10' },
+                  { name: 'Centro Clínico & Diagnósticos', seg: 'Saúde & Exames Médicos', phone: '(11) 97441-2200', portas: '85 salas/leitos', cnpj: '45.123.789/0001-44' },
                 ].map((l, idx) => (
                   <div key={idx} className="grid grid-cols-12 items-center border-b border-slate-800/60 pb-2 last:border-0 last:pb-0">
                     <div className="col-span-5">
