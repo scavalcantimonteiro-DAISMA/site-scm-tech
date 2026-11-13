@@ -764,6 +764,156 @@ function AppSimulator({ project }) {
       );
     }
 
+    case 'b2b': {
+      return (
+        <div className="space-y-4">
+          {renderTabs([
+            'Mineração & Busca de Leads',
+            'Carteira Comercial & WhatsApp',
+            'Visitas Agendadas',
+            'Supervisão & Metas ADM',
+          ])}
+
+          {tab === 0 && (
+            <div className="space-y-3">
+              <div className="rounded-xl border border-amber-500/30 bg-amber-500/10 p-3 flex flex-wrap items-center justify-between gap-3 text-xs">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-amber-300">Filtro Ativo:</span>
+                  <span className="rounded-md bg-slate-900 border border-slate-700 px-2 py-1 text-slate-200">Hotéis & Pousadas</span>
+                  <span className="rounded-md bg-slate-900 border border-slate-700 px-2 py-1 text-slate-200">São Paulo - SP (DDD 11)</span>
+                </div>
+                <div className="text-emerald-400 font-bold">500 Leads Extraídos</div>
+              </div>
+
+              <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3 text-xs space-y-2">
+                <div className="grid grid-cols-12 font-bold text-slate-400 border-b border-slate-800 pb-2">
+                  <span className="col-span-5">Estabelecimento / Ramo</span>
+                  <span className="col-span-3">Telefone / Whats</span>
+                  <span className="col-span-2">Portas/Telas</span>
+                  <span className="col-span-2 text-right">Ação</span>
+                </div>
+                {[
+                  { name: 'Grand Plaza Hotel & Eventos', seg: 'Hotel 4 Estrelas • Jardins', phone: '(11) 98765-4321', portas: '120 quartos', cnpj: '12.345.678/0001-90' },
+                  { name: 'Pousada Villa Verde Resort', seg: 'Resort & Spa • Litoral', phone: '(11) 99123-8877', portas: '65 quartos', cnpj: '98.765.432/0001-10' },
+                  { name: 'Hospital Materno Infantil São Bento', seg: 'Hospital Geral • Moema', phone: '(11) 97441-2200', portas: '85 leitos', cnpj: '45.123.789/0001-44' },
+                ].map((l, idx) => (
+                  <div key={idx} className="grid grid-cols-12 items-center border-b border-slate-800/60 pb-2 last:border-0 last:pb-0">
+                    <div className="col-span-5">
+                      <div className="font-semibold text-white">{l.name}</div>
+                      <div className="text-[10px] text-slate-400">CNPJ: {l.cnpj} • {l.seg}</div>
+                    </div>
+                    <div className="col-span-3 text-cyan-300 font-medium">{l.phone}</div>
+                    <div className="col-span-2 text-emerald-400 font-semibold">{l.portas}</div>
+                    <div className="col-span-2 text-right">
+                      <span className="rounded bg-emerald-500/20 text-emerald-300 px-2 py-0.5 text-[10px] font-bold border border-emerald-500/30">
+                        Importado
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {tab === 1 && (
+            <div className="space-y-3">
+              <div className="grid grid-cols-3 gap-2.5 text-xs">
+                <div className="rounded-xl border border-slate-800 bg-slate-900/90 p-3">
+                  <div className="text-slate-400 text-[11px]">Leads em Carteira</div>
+                  <div className="text-lg font-bold text-white mt-1">48 Contatos</div>
+                  <div className="text-[10px] text-cyan-300">Exclusivos do Consultor</div>
+                </div>
+                <div className="rounded-xl border border-slate-800 bg-slate-900/90 p-3">
+                  <div className="text-slate-400 text-[11px]">Visitas Agendadas</div>
+                  <div className="text-lg font-bold text-emerald-400 mt-1">12 Visitas</div>
+                  <div className="text-[10px] text-emerald-300">Na semana</div>
+                </div>
+                <div className="rounded-xl border border-slate-800 bg-slate-900/90 p-3">
+                  <div className="text-slate-400 text-[11px]">Taxa de Conversão</div>
+                  <div className="text-lg font-bold text-amber-400 mt-1">25.0%</div>
+                  <div className="text-[10px] text-amber-300">Abordagem ativa</div>
+                </div>
+              </div>
+
+              <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3 text-xs space-y-2">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+                  <span className="font-bold text-white">Funil de Atendimento Ativo</span>
+                  <span className="text-[11px] text-emerald-400">Click-to-Call & WhatsApp Integrados</span>
+                </div>
+                {[
+                  { name: 'Hotel Bourbon Express', status: 'Visita Agendada', color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30', note: 'Reunião com Gerente Geral às 14h' },
+                  { name: 'Churrascaria Boi Nobre', status: 'Em Negociação', color: 'bg-blue-500/20 text-blue-300 border-blue-500/30', note: 'Aguardando proposta para 8 telões' },
+                  { name: 'Hospital das Américas', status: 'Contato Realizado', color: 'bg-amber-500/20 text-amber-300 border-amber-500/30', note: 'Secretaria encaminhou para setor de Compras' },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center justify-between border-b border-slate-800/60 pb-2 last:border-0 last:pb-0">
+                    <div>
+                      <div className="font-semibold text-white">{item.name}</div>
+                      <div className="text-[11px] text-slate-400">{item.note}</div>
+                    </div>
+                    <span className={`rounded-lg px-2.5 py-1 text-[10px] font-bold border ${item.color}`}>
+                      {item.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {tab === 2 && (
+            <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3.5 text-xs space-y-2.5">
+              <div className="font-bold text-white flex items-center justify-between">
+                <span>Roteiro de Visitas Presenciais</span>
+                <span className="text-[11px] text-cyan-300">Rotas Integradas Google Maps</span>
+              </div>
+              {[
+                { time: 'Hoje • 14:00', place: 'Grand Plaza Hotel', decisor: 'Carlos Mendes (Gerente Operacional)', address: 'Av. Paulista, 1800 - SP' },
+                { time: 'Amanhã • 10:30', place: 'Hospital Materno Infantil', decisor: 'Dra. Vanessa Lima (Diretora)', address: 'Rua Domingos de Morais, 750 - SP' },
+                { time: 'Amanhã • 16:00', place: 'Pousada Villa Verde', decisor: 'Roberto Souza (Proprietário)', address: 'Av. Beira Mar, 420 - Santos' },
+              ].map((v, i) => (
+                <div key={i} className="rounded-lg bg-slate-950/70 border border-slate-800 p-2.5 flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold text-amber-300">{v.time} — {v.place}</div>
+                    <div className="text-[11px] text-slate-300 mt-0.5">Decisor: {v.decisor}</div>
+                    <div className="text-[10px] text-slate-400">{v.address}</div>
+                  </div>
+                  <span className="rounded bg-cyan-500/15 border border-cyan-400/30 text-cyan-300 px-2 py-1 text-[10px] font-semibold">
+                    Traçar Rota Maps
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {tab === 3 && (
+            <div className="rounded-xl border border-slate-800 bg-slate-900/80 p-3.5 text-xs space-y-3">
+              <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+                <span className="font-bold text-white">Supervisão de Equipe & Ranking de Consultores</span>
+                <span className="text-[11px] text-emerald-400">Exportação Excel (.xlsx) Liberada</span>
+              </div>
+              <div className="grid grid-cols-12 font-bold text-slate-400 text-[11px]">
+                <span className="col-span-5">Consultor Comercial</span>
+                <span className="col-span-3">Leads Minerados</span>
+                <span className="col-span-2">Visitas Marcadas</span>
+                <span className="col-span-2 text-right">Status Meta</span>
+              </div>
+              {[
+                { name: 'Lucas Eduardo', leads: '340 leads', visitas: '14 visitas', meta: '112% (Batida)', color: 'text-emerald-400' },
+                { name: 'Juliana Costa', leads: '280 leads', visitas: '11 visitas', meta: '95% (No ritmo)', color: 'text-cyan-300' },
+                { name: 'Rodrigo Silveira', leads: '190 leads', visitas: '7 visitas', meta: '78% (Ativo)', color: 'text-amber-300' },
+              ].map((c, i) => (
+                <div key={i} className="grid grid-cols-12 items-center border-b border-slate-800/50 pb-2 last:border-0 last:pb-0">
+                  <div className="col-span-5 font-semibold text-white">{c.name}</div>
+                  <div className="col-span-3 text-slate-300">{c.leads}</div>
+                  <div className="col-span-2 text-slate-300">{c.visitas}</div>
+                  <div className={`col-span-2 text-right font-bold text-[11px] ${c.color}`}>{c.meta}</div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      );
+    }
+
     default:
       return null;
   }

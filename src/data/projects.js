@@ -1,5 +1,6 @@
 export const PROJECT_CATEGORIES = [
   'Todos',
+  'Captação B2B',
   'ERPs & Gestão',
   'Gestão de Igrejas',
   'CRM Telecom',
@@ -10,6 +11,51 @@ export const PROJECT_CATEGORIES = [
 ];
 
 export const PROJECTS = [
+  {
+    id: 'captacao-b2b',
+    title: 'Sistema de Prospecção Ativa B2B',
+    subtitle: 'Mineração de CNPJs, enriquecimento com WhatsApp, agendamento de visitas e gestão de equipe',
+    category: 'Captação B2B',
+    badge: 'Novo Sistema • Prospecção Corporativa',
+    accent: 'amber',
+    previewType: 'b2b',
+    image: '/assets/real_screens/captacao_b2b.png',
+    description:
+      'Solução robusta para equipes de vendas corporativas que precisam gerar leads qualificados em escala. Permite filtrar estabelecimentos por segmento (Hotéis, Hospitais, Clínicas, Bares e Restaurantes) nas 27 UFs do Brasil, extraindo CNPJ, WhatsApp verificado e portas de atendimento, com gestão de carteiras individuais e agendamento de visitas presenciais.',
+    modules: [
+      {
+        name: 'Mineração & Gerador de Leads B2B',
+        detail: 'Busca inteligente por CNAE em todo o Brasil, gerando lotes de 50 a 500 estabelecimentos com telefones e decisores.',
+      },
+      {
+        name: 'Carteira Comercial & Click-to-WhatsApp',
+        detail: 'Controle de funil comercial (Novo, Em Negociação, Visita Agendada), click-to-call e proposta pronta para disparo no WhatsApp.',
+      },
+      {
+        name: 'Agenda de Visitas & Rota no Maps',
+        detail: 'Calendário de reuniões presenciais com data, hora, nome do decisor e cálculo de trajeto direto no Google Maps.',
+      },
+      {
+        name: 'Supervisão de Equipe & Exportação Excel',
+        detail: 'Painel Master para gerentes acompanharem metas individuais, ranking de consultores e download em planilha .xlsx.',
+      },
+    ],
+    capabilities: [
+      'Minerar centenas de leads corporativos qualificados em segundos por estado e município',
+      'Distribuir carteiras exclusivas para cada consultor sem risco de duplicidade de abordagem',
+      'Enviar propostas comerciais personalizadas no WhatsApp com apenas 1 clique',
+      'Acompanhar taxa de conversão, metas batidas e visitas presenciais agendadas em tempo real',
+    ],
+    highlights: [
+      'Mineração por segmento em 27 UFs: Hotéis, Hospitais e Gastronomia de grande porte',
+      'Funil de Prospecção Ativa: Novo → Contato → Negociação → Visita Marcada → Fechado',
+      'Painel do Supervisor: controle de metas individuais e produtividade da equipe comercial',
+      'Exportação instantânea para planilhas Excel (.xlsx) e rotas diretas no Google Maps',
+    ],
+    techStack: ['React 19', 'Node.js', 'Express', 'Tailwind CSS', 'TypeScript', 'SheetJS'],
+    whatsappMessage:
+      'Olá Saulo! Vi o Sistema de Captação e Prospecção B2B no site da SCM Tech e quero implantar na minha equipe comercial.',
+  },
   {
     id: 'erp-empresarial',
     title: 'ERP Empresarial & Distribuição',

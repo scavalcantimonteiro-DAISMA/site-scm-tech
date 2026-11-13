@@ -30,8 +30,8 @@ export function Hero({ onOpenFeatured }) {
 
           <p className="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
             A <strong className="text-white">SCM Tech</strong> desenvolve sistemas empresariais completos (ERPs e CRMs),
-            aplicativos instaláveis (PWA), robôs de atendimento no WhatsApp, dashboards de KPIs, plataformas SaaS
-            para igrejas e jogos infantis interativos — tudo sob medida para o seu negócio escalar.
+            plataformas de captação e prospecção ativa B2B, aplicativos instaláveis (PWA), robôs no WhatsApp, dashboards de KPIs,
+            sistemas para igrejas e jogos interativos — tudo sob medida para o seu negócio escalar.
           </p>
 
           {/* Primary CTAs */}
