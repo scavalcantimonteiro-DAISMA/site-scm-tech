@@ -5,12 +5,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #040b16;
+    background-color: #0B0F17;
   }
 
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
+    background-color: #0B0F17;
+    color: #F8FAFC;
   }
 
   h1, h2, h3, h4, .font-display {
@@ -20,16 +22,16 @@
 
 .bg-cyber-grid {
   background-image:
-    linear-gradient(to right, rgba(0, 212, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
-  background-size: 42px 42px;
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 .glass-panel {
-  background: linear-gradient(145deg, rgba(13, 30, 54, 0.78), rgba(6, 17, 34, 0.92));
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.85), rgba(11, 15, 23, 0.95));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(56, 189, 248, 0.16);
+  border: 1px solid rgba(56, 189, 248, 0.12);
 }
 
 .glass-card-hover {
@@ -38,12 +40,54 @@
 
 .glass-card-hover:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 212, 255, 0.42);
-  box-shadow: 0 20px 45px -15px rgba(0, 212, 255, 0.18);
+  border-color: rgba(37, 99, 235, 0.45);
+  box-shadow: 0 20px 45px -15px rgba(37, 99, 235, 0.2);
 }
 
 /* =========================================================
-   PALETA 1: AZUL TECH ILUMINADO (Mais leve que preto)
+   PALETA 1: DARK SLATE EXECUTIVE (Estilo Linear / Vercel)
+   ========================================================= */
+.palette-dark-slate {
+  background-color: #0B0F17 !important;
+  color: #F8FAFC !important;
+}
+
+.palette-dark-slate header {
+  background-color: rgba(11, 15, 23, 0.92) !important;
+  border-color: #1E293B !important;
+}
+
+.palette-dark-slate #topo {
+  background-color: #0B0F17 !important;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(37, 99, 235, 0.14), transparent 45%),
+    radial-gradient(circle at 80% 25%, rgba(56, 189, 248, 0.08), transparent 50%),
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px) !important;
+}
+
+.palette-dark-slate section {
+  background-color: #0B0F17 !important;
+  border-color: #1E293B !important;
+}
+
+.palette-dark-slate section:nth-of-type(even) {
+  background-color: #0E1524 !important;
+}
+
+.palette-dark-slate .glass-panel {
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.9), rgba(11, 15, 23, 0.96)) !important;
+  border: 1px solid #1E293B !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4) !important;
+}
+
+.palette-dark-slate footer {
+  background-color: #070A10 !important;
+  border-color: #1E293B !important;
+}
+
+/* =========================================================
+   PALETA 1 ANTERIOR: AZUL TECH
    ========================================================= */
 .palette-azul {
   background-color: #0f2544 !important;
@@ -254,14 +298,14 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #040b16;
+  background: #0B0F17;
 }
 ::-webkit-scrollbar-thumb {
-  background: #163a70;
+  background: #1E293B;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00d4ff;
+  background: #2563EB;
 }
 
 .no-scrollbar::-webkit-scrollbar {

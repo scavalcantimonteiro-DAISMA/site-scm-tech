@@ -13,14 +13,25 @@ import { PROJECTS } from './data/projects';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
-  const params = new URLSearchParams(window.location.search);
-  const palette = params.get('palette') || 'hibrido'; // 'hibrido' default
-  const paletteClass =
-    palette === 'azul'
-      ? 'palette-azul'
-      : palette === 'claro'
-        ? 'palette-claro'
-        : 'palette-hibrido';
+
+  // Theme: 'dark' (Dark Slate Executive, default) or 'light' (Clean Light SaaS)
+  const [theme, setTheme] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    const paramPalette = params.get('palette');
+    if (paramPalette === 'claro' || paramPalette === 'light') return 'light';
+    if (paramPalette === 'dark' || paramPalette === 'slate') return 'dark';
+    return localStorage.getItem('scm_theme') || 'dark';
+  });
+
+  const toggleTheme = () => {
+    setTheme((prev) => {
+      const next = prev === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('scm_theme', next);
+      return next;
+    });
+  };
+
+  const themeClass = theme === 'light' ? 'palette-claro' : 'palette-dark-slate';
 
   const openProjectById = (id) => {
     const found = PROJECTS.find((p) => p.id === id);
@@ -28,13 +39,13 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen bg-[#040B16] text-slate-100 ${paletteClass}`}>
-      <Navbar />
+    <div className={`min-h-screen bg-[#0B0F17] text-slate-100 ${themeClass}`}>
+      <Navbar theme={theme} onToggleTheme={toggleTheme} />
 
       <main>
-        <Hero onOpenFeatured={() => openProjectById('erp-empresarial')} />
+        <Hero onOpenFeatured={openProjectById} />
 
-        <div className="light-zone">
+        <div className={theme === 'light' ? 'light-zone' : ''}>
           <ProjectsCarousel onSelectProject={setSelectedProject} />
 
           <ChurchSection onOpenChurchModal={() => openProjectById('gestao-igrejas')} />
