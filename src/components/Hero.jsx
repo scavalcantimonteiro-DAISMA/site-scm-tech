@@ -45,7 +45,7 @@ export function Hero({ onOpenFeatured }) {
   return (
     <section
       id="topo"
-      className="relative overflow-hidden bg-cyber-grid pt-8 pb-14 sm:pt-12 sm:pb-20"
+      className="relative overflow-hidden bg-clean-gradient pt-8 pb-14 sm:pt-12 sm:pb-20"
     >
       {/* Ambient executive glow */}
       <div className="pointer-events-none absolute -top-28 left-1/4 h-96 w-96 rounded-full bg-blue-600/15 blur-[120px]" />

@@ -20,11 +20,11 @@
   }
 }
 
-.bg-cyber-grid {
+.bg-clean-gradient {
+  background-color: #0B0F17;
   background-image:
-    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
+    radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.14), transparent 65%),
+    radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.08), transparent 50%);
 }
 
 .glass-panel {
@@ -60,10 +60,8 @@
 .palette-dark-slate #topo {
   background-color: #0B0F17 !important;
   background-image:
-    radial-gradient(circle at 20% 15%, rgba(37, 99, 235, 0.14), transparent 45%),
-    radial-gradient(circle at 80% 25%, rgba(56, 189, 248, 0.08), transparent 50%),
-    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px) !important;
+    radial-gradient(circle at 25% 15%, rgba(37, 99, 235, 0.16), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(56, 189, 248, 0.09), transparent 50%) !important;
 }
 
 .palette-dark-slate section {
