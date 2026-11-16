@@ -112,18 +112,7 @@ export function Hero({ onOpenFeatured }) {
               </div>
             </div>
 
-            {/* Floating mini card */}
-            <div className="hidden sm:flex absolute -left-8 bottom-20 glass-panel rounded-2xl px-4 py-3 shadow-xl animate-float-slow">
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400 font-bold text-sm">
-                  99%
-                </div>
-                <div>
-                  <div className="text-xs font-bold text-white">Sob Medida</div>
-                  <div className="text-[11px] text-slate-400">Web • Mobile • APIs</div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
