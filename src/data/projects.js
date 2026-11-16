@@ -58,15 +58,15 @@ export const PROJECTS = [
   },
   {
     id: 'erp-empresarial',
-    title: 'ERP Empresarial & Distribuição',
-    subtitle: 'Controle total de estoque, compras, vendas, fiscal, financeiro e auditoria',
+    title: 'ERP FLUX Distribuidora',
+    subtitle: 'Controle total de estoque multi-depósitos, compras, vendas, fiscal, financeiro e auditoria',
     category: 'ERPs & Gestão',
     badge: 'Sistema Corporativo Full-Stack',
     accent: 'cyan',
     previewType: 'erp',
-    image: '/assets/real_screens/painel_financeiro.png',
+    image: '/assets/real_screens/flux_dashboard_real.png',
     description:
-      'Plataforma ERP completa para empresas comerciais e distribuidoras que precisam unificar operação, estoque multi-depósitos, fluxo de compras/vendas, financeiro, fiscal e governança com trilha de auditoria imutável.',
+      'Plataforma ERP completa desenvolvida para a FLUX Distribuidora (fibra óptica e telecomunicações) e empresas comerciais que precisam unificar operação, estoque multi-depósitos por SKU, fluxo de compras/vendas com alçada, financeiro, fiscal e governança com trilha de auditoria imutável.',
     modules: [
       {
         name: 'Estoque & Multi-Depósitos',
@@ -99,7 +99,7 @@ export const PROJECTS = [
     ],
     techStack: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma ORM', 'Tailwind CSS'],
     whatsappMessage:
-      'Olá Saulo! Vi o ERP Empresarial no site da SCM Tech e quero saber como implantar na minha empresa.',
+      'Olá Saulo! Vi o ERP FLUX Distribuidora no site da SCM Tech e quero implantar na minha empresa.',
   },
   {
     id: 'gestao-igrejas',
